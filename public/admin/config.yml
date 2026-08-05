@@ -1,0 +1,68 @@
+# Decap CMS configuration
+# Before production use, replace YOUR_VERCEL_DOMAIN below.
+
+backend:
+  name: github
+  repo: One-johnson/decap-cms-demo
+  branch: main
+  base_url: https://YOUR_VERCEL_DOMAIN
+  auth_endpoint: api/auth
+
+# Enables local editing without GitHub OAuth when decap-server is running
+local_backend: true
+
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  - name: pages
+    label: Pages
+    files:
+      - name: home
+        label: Home
+        file: content/home.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Hero Heading, name: heroHeading, widget: string }
+          - { label: Hero Description, name: heroDescription, widget: text }
+          - { label: Call to Action Text, name: ctaText, widget: string }
+          - { label: Hero Image, name: heroImage, widget: image, required: false }
+          - { label: Body, name: body, widget: markdown }
+
+      - name: about
+        label: About
+        file: content/about.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Company Description, name: companyDescription, widget: text }
+          - { label: Mission, name: mission, widget: text }
+          - { label: Vision, name: vision, widget: text }
+          - { label: Values, name: values, widget: text }
+          - { label: Body, name: body, widget: markdown }
+
+      - name: services
+        label: Services
+        file: content/services.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Description, name: description, widget: text }
+          - label: Service Items
+            name: services
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Service Title, name: title, widget: string }
+              - { label: Service Description, name: description, widget: text }
+              - { label: Image, name: image, widget: image, required: false }
+          - { label: Body, name: body, widget: markdown }
+
+      - name: contact
+        label: Contact
+        file: content/contact.md
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Address, name: address, widget: string }
+          - { label: Phone, name: phone, widget: string }
+          - { label: Email, name: email, widget: string }
+          - { label: WhatsApp, name: whatsapp, widget: string }
+          - { label: Body, name: body, widget: markdown }
