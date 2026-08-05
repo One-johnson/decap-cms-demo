@@ -5,7 +5,7 @@ backend:
   name: github
   repo: One-johnson/decap-cms-demo
   branch: main
-  base_url: https://YOUR_VERCEL_DOMAIN
+  base_url: https://decap-cms-demo.vercel.app
   auth_endpoint: api/auth
 
 # Enables local editing without GitHub OAuth when decap-server is running
