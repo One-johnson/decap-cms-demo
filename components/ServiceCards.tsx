@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CtaLink from "@/components/CtaLink";
 import type { ServiceItem } from "@/lib/content";
 
 interface ServiceCardsProps {
@@ -30,6 +31,17 @@ export default function ServiceCards({ services }: ServiceCardsProps) {
           <p className="mt-2 text-sm leading-relaxed text-slate-600">
             {service.description}
           </p>
+          {service.ctaText && service.ctaLink ? (
+            <CtaLink
+              href={service.ctaLink}
+              className="mt-4 inline-flex text-sm font-semibold text-teal-700 transition hover:text-teal-800"
+            >
+              {service.ctaText}
+              <span aria-hidden className="ml-1">
+                →
+              </span>
+            </CtaLink>
+          ) : null}
         </li>
       ))}
     </ul>
