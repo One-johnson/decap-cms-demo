@@ -1,7 +1,12 @@
 import type { Metadata } from "next";
+import CtaBand from "@/components/CtaBand";
 import Hero from "@/components/Hero";
 import MarkdownBody from "@/components/MarkdownBody";
-import { getPageContent, type HomeFrontmatter } from "@/lib/content";
+import {
+  getPageContent,
+  getSettings,
+  type HomeFrontmatter,
+} from "@/lib/content";
 
 export function generateMetadata(): Metadata {
   const { data } = getPageContent<HomeFrontmatter>("home");
@@ -13,6 +18,7 @@ export function generateMetadata(): Metadata {
 
 export default function HomePage() {
   const { data, content } = getPageContent<HomeFrontmatter>("home");
+  const settings = getSettings();
 
   return (
     <>
@@ -20,14 +26,23 @@ export default function HomePage() {
         heading={data.heroHeading}
         description={data.heroDescription}
         ctaText={data.ctaText}
-        ctaHref="/services"
+        ctaHref={data.ctaLink || "/services"}
+        secondaryCtaText={data.secondaryCtaText}
+        secondaryCtaHref={data.secondaryCtaLink}
         image={data.heroImage}
+        brandName={settings.brandName}
       />
       <section className="page-shell">
         <div className="mx-auto max-w-3xl px-6 py-20 lg:px-8">
           <MarkdownBody content={content} />
         </div>
       </section>
+      <CtaBand
+        heading={data.ctaBandHeading}
+        description={data.ctaBandDescription}
+        buttonText={data.ctaBandButtonText}
+        buttonLink={data.ctaBandButtonLink}
+      />
     </>
   );
 }

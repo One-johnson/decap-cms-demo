@@ -1,20 +1,26 @@
 import Image from "next/image";
-import Link from "next/link";
+import CtaLink from "@/components/CtaLink";
 
 interface HeroProps {
   heading: string;
   description: string;
   ctaText: string;
-  ctaHref?: string;
+  ctaHref: string;
+  secondaryCtaText?: string;
+  secondaryCtaHref?: string;
   image?: string;
+  brandName?: string;
 }
 
 export default function Hero({
   heading,
   description,
   ctaText,
-  ctaHref = "/services",
+  ctaHref,
+  secondaryCtaText,
+  secondaryCtaHref,
   image,
+  brandName = "Apex Consulting",
 }: HeroProps) {
   return (
     <section className="relative flex min-h-[100svh] items-center overflow-hidden bg-[#0f2744]">
@@ -52,7 +58,7 @@ export default function Hero({
 
       <div className="relative mx-auto w-full max-w-6xl px-6 pb-20 pt-28 lg:px-8 lg:pt-32">
         <p className="animate-fade-up text-sm font-semibold uppercase tracking-[0.2em] text-teal-300/90">
-          Apex Consulting
+          {brandName}
         </p>
         <h1 className="animate-fade-up animation-delay-100 mt-5 max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">
           {heading}
@@ -60,13 +66,21 @@ export default function Hero({
         <p className="animate-fade-up animation-delay-200 mt-6 max-w-xl text-lg leading-relaxed text-slate-200/90">
           {description}
         </p>
-        <div className="animate-fade-up animation-delay-300 mt-10">
-          <Link
+        <div className="animate-fade-up animation-delay-300 mt-10 flex flex-wrap items-center gap-4">
+          <CtaLink
             href={ctaHref}
             className="inline-flex items-center rounded-md bg-teal-400 px-6 py-3 text-sm font-semibold text-[#0f2744] transition hover:bg-teal-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-300"
           >
             {ctaText}
-          </Link>
+          </CtaLink>
+          {secondaryCtaText && secondaryCtaHref ? (
+            <CtaLink
+              href={secondaryCtaHref}
+              className="inline-flex items-center rounded-md border border-white/30 px-6 py-3 text-sm font-semibold text-white transition hover:border-white/60 hover:bg-white/5"
+            >
+              {secondaryCtaText}
+            </CtaLink>
+          ) : null}
         </div>
       </div>
     </section>

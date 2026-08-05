@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import CtaLink from "@/components/CtaLink";
 
 const links = [
   { href: "/", label: "Home" },
@@ -11,7 +12,13 @@ const links = [
   { href: "/contact", label: "Contact" },
 ];
 
-export default function Navbar() {
+interface NavbarProps {
+  brandName: string;
+  ctaText: string;
+  ctaLink: string;
+}
+
+export default function Navbar({ brandName, ctaText, ctaLink }: NavbarProps) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
@@ -22,7 +29,7 @@ export default function Navbar() {
           href="/"
           className="text-lg font-semibold tracking-tight text-white transition-opacity hover:opacity-90"
         >
-          Apex Consulting
+          {brandName}
         </Link>
 
         <button
@@ -56,25 +63,33 @@ export default function Navbar() {
           </svg>
         </button>
 
-        <ul className="hidden items-center gap-8 md:flex">
-          {links.map((link) => {
-            const active = pathname === link.href;
-            return (
-              <li key={link.href}>
-                <Link
-                  href={link.href}
-                  className={`text-sm font-medium transition-colors ${
-                    active
-                      ? "text-teal-300"
-                      : "text-white/85 hover:text-white"
-                  }`}
-                >
-                  {link.label}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+        <div className="hidden items-center gap-8 md:flex">
+          <ul className="flex items-center gap-8">
+            {links.map((link) => {
+              const active = pathname === link.href;
+              return (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className={`text-sm font-medium transition-colors ${
+                      active
+                        ? "text-teal-300"
+                        : "text-white/85 hover:text-white"
+                    }`}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+          <CtaLink
+            href={ctaLink}
+            className="rounded-md bg-teal-400 px-4 py-2 text-sm font-semibold text-[#0f2744] transition hover:bg-teal-300"
+          >
+            {ctaText}
+          </CtaLink>
+        </div>
       </nav>
 
       {open && (
@@ -96,6 +111,15 @@ export default function Navbar() {
                 </li>
               );
             })}
+            <li className="pt-2">
+              <CtaLink
+                href={ctaLink}
+                onClick={() => setOpen(false)}
+                className="inline-flex rounded-md bg-teal-400 px-4 py-2 text-sm font-semibold text-[#0f2744]"
+              >
+                {ctaText}
+              </CtaLink>
+            </li>
           </ul>
         </div>
       )}
