@@ -23,6 +23,8 @@ collections:
         file: content/settings.md
         fields:
           - { label: Brand Name, name: brandName, widget: string }
+          - { label: Logo, name: logo, widget: image, required: false, hint: "Shown in the header and footer" }
+          - { label: Favicon, name: favicon, widget: image, required: false, hint: "Browser tab icon (square PNG/SVG/ICO works best)" }
           - { label: Footer Blurb, name: footerBlurb, widget: text }
           - { label: Nav CTA Text, name: navCtaText, widget: string }
           - { label: Nav CTA Link, name: navCtaLink, widget: string, hint: "e.g. /contact or https://..." }
@@ -45,6 +47,24 @@ collections:
           - { label: Secondary CTA Link, name: secondaryCtaLink, widget: string, required: false }
           - { label: Hero Image, name: heroImage, widget: image, required: false }
           - { label: Body, name: body, widget: markdown }
+          - { label: Process Heading, name: processHeading, widget: string, required: false }
+          - label: Process Steps
+            name: processSteps
+            widget: list
+            required: false
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+          - { label: Why Choose Us Heading, name: whyChooseUsHeading, widget: string, required: false }
+          - label: Why Choose Us
+            name: whyChooseUs
+            widget: list
+            required: false
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
           - { label: CTA Band Heading, name: ctaBandHeading, widget: string, required: false }
           - { label: CTA Band Description, name: ctaBandDescription, widget: text, required: false }
           - { label: CTA Band Button Text, name: ctaBandButtonText, widget: string, required: false }
@@ -58,8 +78,24 @@ collections:
           - { label: Company Description, name: companyDescription, widget: text }
           - { label: Mission, name: mission, widget: text }
           - { label: Vision, name: vision, widget: text }
-          - { label: Values, name: values, widget: text }
+          - label: Values
+            name: values
+            widget: list
+            required: false
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
           - { label: Body, name: body, widget: markdown }
+          - { label: Compliance Heading, name: complianceHeading, widget: string, required: false }
+          - label: Compliance Items
+            name: complianceItems
+            widget: list
+            required: false
+            summary: "{{fields.label}}"
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: Detail, name: detail, widget: text }
           - { label: Inline CTA Text, name: ctaText, widget: string, required: false }
           - { label: Inline CTA Link, name: ctaLink, widget: string, required: false }
           - { label: CTA Band Heading, name: ctaBandHeading, widget: string, required: false }
@@ -102,4 +138,7 @@ collections:
           - { label: WhatsApp Button Text, name: whatsappButtonText, widget: string, required: false }
           - { label: Booking CTA Text, name: bookingCtaText, widget: string, required: false }
           - { label: Booking CTA Link, name: bookingCtaLink, widget: string, required: false, hint: "Calendly or /contact" }
+          - { label: Form Heading, name: formHeading, widget: string, required: false }
+          - { label: Form Button Text, name: formButtonText, widget: string, required: false }
+          - { label: Form Success Message, name: formSuccessMessage, widget: text, required: false }
           - { label: Body, name: body, widget: markdown }

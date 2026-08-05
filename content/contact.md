@@ -1,13 +1,16 @@
 ---
 title: Contact
-ctaHeading: Let's talk
-address: 1200 Market Street, Suite 400, San Francisco, CA 94102
-phone: "+233 55 330 1044"
-email: hello@apexconsulting.example
-whatsapp: "+14155550198"
+ctaHeading: Let's talk gold
+address: Independence Avenue, Ridge, Accra, Ghana
+phone: "+233 30 555 0180"
+email: info@goldenmark.example
+whatsapp: "+233 55 330 1044"
 whatsappButtonText: Message on WhatsApp
-bookingCtaText: Book a discovery call
+bookingCtaText: Request a trade call
 bookingCtaLink: /contact
+formHeading: Send a trade inquiry
+formButtonText: Send message
+formSuccessMessage: Thank you — we received your inquiry and will reply within one business day.
 ---
 
-Ready to talk? Reach out by phone, email, or WhatsApp — we typically respond within one business day.
+Reach Goldenmark by phone, email, WhatsApp, or the form below. Whether you supply gold or need verified supply, our Accra team responds promptly with clear next steps.

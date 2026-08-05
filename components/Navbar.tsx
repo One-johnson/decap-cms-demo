@@ -1,8 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
 import CtaLink from "@/components/CtaLink";
 
 const links = [
@@ -14,27 +14,50 @@ const links = [
 
 interface NavbarProps {
   brandName: string;
+  logo?: string;
   ctaText: string;
   ctaLink: string;
 }
 
-export default function Navbar({ brandName, ctaText, ctaLink }: NavbarProps) {
+export default function Navbar({
+  brandName,
+  ctaText,
+  ctaLink,
+}: NavbarProps) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 8);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
 
   return (
-    <header className="absolute inset-x-0 top-0 z-50">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 lg:px-8">
+    <header
+      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+        scrolled || open
+          ? "bg-charcoal/95 shadow-lg shadow-black/20 backdrop-blur-md"
+          : "bg-charcoal/80 backdrop-blur-sm"
+      }`}
+    >
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8">
         <Link
           href="/"
-          className="text-lg font-semibold tracking-tight text-white transition-opacity hover:opacity-90"
+          className="font-display text-3xl font-semibold tracking-tight text-gold-light transition-opacity hover:opacity-90"
         >
           {brandName}
         </Link>
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-md p-2 text-white/90 md:hidden"
+          className="inline-flex items-center justify-center rounded-sm p-2 text-gold-light/90 md:hidden"
           aria-expanded={open}
           aria-label="Toggle navigation"
           onClick={() => setOpen((value) => !value)}
@@ -71,10 +94,10 @@ export default function Navbar({ brandName, ctaText, ctaLink }: NavbarProps) {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className={`text-sm font-medium transition-colors ${
+                    className={`text-base font-medium transition-colors ${
                       active
-                        ? "text-teal-300"
-                        : "text-white/85 hover:text-white"
+                        ? "text-gold-light"
+                        : "text-white/80 hover:text-gold-light"
                     }`}
                   >
                     {link.label}
@@ -85,7 +108,7 @@ export default function Navbar({ brandName, ctaText, ctaLink }: NavbarProps) {
           </ul>
           <CtaLink
             href={ctaLink}
-            className="rounded-md bg-teal-400 px-4 py-2 text-sm font-semibold text-[#0f2744] transition hover:bg-teal-300"
+            className="rounded-sm bg-gold px-5 py-2.5 text-base font-semibold text-charcoal transition hover:bg-gold-light"
           >
             {ctaText}
           </CtaLink>
@@ -93,7 +116,7 @@ export default function Navbar({ brandName, ctaText, ctaLink }: NavbarProps) {
       </nav>
 
       {open && (
-        <div className="border-t border-white/10 bg-[#0f2744]/95 px-6 py-4 backdrop-blur md:hidden">
+        <div className="border-t border-gold/15 px-6 py-4 md:hidden">
           <ul className="flex flex-col gap-3">
             {links.map((link) => {
               const active = pathname === link.href;
@@ -102,8 +125,8 @@ export default function Navbar({ brandName, ctaText, ctaLink }: NavbarProps) {
                   <Link
                     href={link.href}
                     onClick={() => setOpen(false)}
-                    className={`block text-sm font-medium ${
-                      active ? "text-teal-300" : "text-white/90"
+                    className={`block text-base font-medium ${
+                      active ? "text-gold-light" : "text-white/90"
                     }`}
                   >
                     {link.label}
@@ -115,7 +138,7 @@ export default function Navbar({ brandName, ctaText, ctaLink }: NavbarProps) {
               <CtaLink
                 href={ctaLink}
                 onClick={() => setOpen(false)}
-                className="inline-flex rounded-md bg-teal-400 px-4 py-2 text-sm font-semibold text-[#0f2744]"
+                className="inline-flex rounded-sm bg-gold px-5 py-2.5 text-base font-semibold text-charcoal"
               >
                 {ctaText}
               </CtaLink>

@@ -8,40 +8,50 @@ interface ServiceCardsProps {
 
 export default function ServiceCards({ services }: ServiceCardsProps) {
   return (
-    <ul className="mt-12 grid gap-8 sm:grid-cols-2">
-      {services.map((service) => (
+    <ul className="mt-12 space-y-16">
+      {services.map((service, index) => (
         <li
           key={service.title}
-          className="group border-t border-slate-200 pt-6 transition hover:border-teal-400"
+          className="animate-fade-up border-t border-gold/25 pt-10"
+          style={{ animationDelay: `${index * 0.08}s` }}
         >
-          {service.image ? (
-            <div className="relative mb-4 aspect-[16/9] overflow-hidden bg-slate-100">
-              <Image
-                src={service.image}
-                alt=""
-                fill
-                className="object-cover transition duration-500 group-hover:scale-[1.02]"
-                sizes="(max-width: 640px) 100vw, 50vw"
-              />
+          <div className="grid gap-8 lg:grid-cols-[1fr_1.4fr] lg:items-start lg:gap-16">
+            <div>
+              <p className="section-label">
+                {String(index + 1).padStart(2, "0")}
+              </p>
+              <h3 className="mt-4 font-display text-3xl font-semibold tracking-tight text-charcoal sm:text-4xl">
+                {service.title}
+              </h3>
+              {service.ctaText && service.ctaLink ? (
+                <CtaLink
+                  href={service.ctaLink}
+                  className="mt-6 inline-flex text-base font-semibold text-gold-muted transition hover:text-gold"
+                >
+                  {service.ctaText}
+                  <span aria-hidden className="ml-1">
+                    →
+                  </span>
+                </CtaLink>
+              ) : null}
             </div>
-          ) : null}
-          <h3 className="text-lg font-semibold text-[#0f2744]">
-            {service.title}
-          </h3>
-          <p className="mt-2 text-sm leading-relaxed text-slate-600">
-            {service.description}
-          </p>
-          {service.ctaText && service.ctaLink ? (
-            <CtaLink
-              href={service.ctaLink}
-              className="mt-4 inline-flex text-sm font-semibold text-teal-700 transition hover:text-teal-800"
-            >
-              {service.ctaText}
-              <span aria-hidden className="ml-1">
-                →
-              </span>
-            </CtaLink>
-          ) : null}
+            <div>
+              {service.image ? (
+                <div className="relative mb-6 aspect-[16/9] overflow-hidden bg-charcoal/5">
+                  <Image
+                    src={service.image}
+                    alt=""
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                </div>
+              ) : null}
+              <p className="text-lg leading-relaxed text-stone whitespace-pre-line sm:text-xl">
+                {service.description}
+              </p>
+            </div>
+          </div>
         </li>
       ))}
     </ul>

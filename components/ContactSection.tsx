@@ -22,50 +22,42 @@ export default function ContactSection({
   const whatsappHref = `https://wa.me/${whatsapp.replace(/\D/g, "")}`;
 
   return (
-    <div className="mt-10">
-      <dl className="grid gap-8 sm:grid-cols-2">
+    <div>
+      <dl className="grid gap-8 sm:grid-cols-2 lg:grid-cols-1">
         <div>
-          <dt className="text-xs font-semibold uppercase tracking-wider text-teal-700">
-            Address
-          </dt>
-          <dd className="mt-2 text-base text-slate-700">{address}</dd>
+          <dt className="section-label">Address</dt>
+          <dd className="mt-3 text-lg text-foreground sm:text-xl">{address}</dd>
         </div>
         <div>
-          <dt className="text-xs font-semibold uppercase tracking-wider text-teal-700">
-            Phone
-          </dt>
-          <dd className="mt-2">
+          <dt className="section-label">Phone</dt>
+          <dd className="mt-3">
             <a
               href={`tel:${phone.replace(/\s/g, "")}`}
-              className="text-base text-slate-700 hover:text-teal-700"
+              className="text-lg text-foreground transition hover:text-gold-muted sm:text-xl"
             >
               {phone}
             </a>
           </dd>
         </div>
         <div>
-          <dt className="text-xs font-semibold uppercase tracking-wider text-teal-700">
-            Email
-          </dt>
-          <dd className="mt-2">
+          <dt className="section-label">Email</dt>
+          <dd className="mt-3">
             <a
               href={`mailto:${email}`}
-              className="text-base text-slate-700 hover:text-teal-700"
+              className="text-lg text-foreground transition hover:text-gold-muted sm:text-xl"
             >
               {email}
             </a>
           </dd>
         </div>
         <div>
-          <dt className="text-xs font-semibold uppercase tracking-wider text-teal-700">
-            WhatsApp
-          </dt>
-          <dd className="mt-2">
+          <dt className="section-label">WhatsApp</dt>
+          <dd className="mt-3">
             <a
               href={whatsappHref}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-base text-slate-700 hover:text-teal-700"
+              className="text-lg text-foreground transition hover:text-gold-muted sm:text-xl"
             >
               {whatsapp}
             </a>
@@ -78,14 +70,14 @@ export default function ContactSection({
           href={whatsappHref}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex rounded-md bg-teal-400 px-5 py-3 text-sm font-semibold text-[#0f2744] transition hover:bg-teal-300"
+          className="inline-flex rounded-sm bg-gold px-6 py-3.5 text-base font-semibold text-charcoal transition hover:bg-gold-light"
         >
           {whatsappButtonText}
         </a>
         {bookingCtaText && bookingCtaLink ? (
           <CtaLink
             href={bookingCtaLink}
-            className="inline-flex rounded-md border border-[#0f2744]/20 px-5 py-3 text-sm font-semibold text-[#0f2744] transition hover:border-teal-500 hover:text-teal-700"
+            className="inline-flex rounded-sm border border-charcoal/20 px-6 py-3.5 text-base font-semibold text-charcoal transition hover:border-gold hover:text-gold-muted"
           >
             {bookingCtaText}
           </CtaLink>

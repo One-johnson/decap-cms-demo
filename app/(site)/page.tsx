@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import CtaBand from "@/components/CtaBand";
 import Hero from "@/components/Hero";
 import MarkdownBody from "@/components/MarkdownBody";
+import ProcessSteps from "@/components/ProcessSteps";
+import WhyChooseUs from "@/components/WhyChooseUs";
 import {
   getPageContent,
   getSettings,
@@ -33,10 +35,18 @@ export default function HomePage() {
         brandName={settings.brandName}
       />
       <section className="page-shell">
-        <div className="mx-auto max-w-3xl px-6 py-20 lg:px-8">
+        <div className="mx-auto max-w-3xl px-6 py-20 lg:px-8 lg:py-24">
           <MarkdownBody content={content} />
         </div>
+        <ProcessSteps
+          heading={data.processHeading}
+          steps={data.processSteps ?? []}
+        />
       </section>
+      <WhyChooseUs
+        heading={data.whyChooseUsHeading}
+        items={data.whyChooseUs ?? []}
+      />
       <CtaBand
         heading={data.ctaBandHeading}
         description={data.ctaBandDescription}
