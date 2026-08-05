@@ -22,15 +22,16 @@ export default function ServicesPage() {
 
   return (
     <div className="page-shell">
-      <div className="bg-[#0f2744] pb-16 pt-28 lg:pt-32">
+      <div className="bg-charcoal pb-16 pt-28 lg:pt-32">
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-300/90">
+          <p className="font-display text-3xl font-semibold tracking-tight text-gold-light sm:text-4xl">
             {settings.brandName}
           </p>
-          <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+          <h1 className="mt-5 font-display text-5xl font-semibold tracking-tight text-white sm:text-6xl">
             {data.title}
           </h1>
-          <p className="mt-4 max-w-2xl text-lg text-slate-200/90">
+          <span aria-hidden className="gold-rule mt-7" />
+          <p className="mt-7 max-w-2xl text-xl text-stone-light sm:text-2xl">
             {data.description}
           </p>
         </div>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ContactForm from "@/components/ContactForm";
 import ContactSection from "@/components/ContactSection";
 import MarkdownBody from "@/components/MarkdownBody";
 import {
@@ -22,28 +23,39 @@ export default function ContactPage() {
 
   return (
     <div className="page-shell">
-      <div className="bg-[#0f2744] pb-16 pt-28 lg:pt-32">
+      <div className="bg-charcoal pb-16 pt-28 lg:pt-32">
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-teal-300/90">
+          <p className="font-display text-3xl font-semibold tracking-tight text-gold-light sm:text-4xl">
             {settings.brandName}
           </p>
-          <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+          <h1 className="mt-5 font-display text-5xl font-semibold tracking-tight text-white sm:text-6xl">
             {data.ctaHeading || data.title}
           </h1>
+          <span aria-hidden className="gold-rule mt-7" />
         </div>
       </div>
 
-      <div className="mx-auto max-w-3xl px-6 py-16 lg:px-8">
-        <MarkdownBody content={content} />
-        <ContactSection
-          address={data.address}
-          phone={data.phone}
-          email={data.email}
-          whatsapp={data.whatsapp}
-          whatsappButtonText={data.whatsappButtonText}
-          bookingCtaText={data.bookingCtaText}
-          bookingCtaLink={data.bookingCtaLink}
-        />
+      <div className="mx-auto max-w-6xl px-6 py-16 lg:px-8">
+        <div className="max-w-3xl">
+          <MarkdownBody content={content} />
+        </div>
+
+        <div className="mt-12 grid gap-12 lg:grid-cols-2 lg:gap-16">
+          <ContactSection
+            address={data.address}
+            phone={data.phone}
+            email={data.email}
+            whatsapp={data.whatsapp}
+            whatsappButtonText={data.whatsappButtonText}
+            bookingCtaText={data.bookingCtaText}
+            bookingCtaLink={data.bookingCtaLink}
+          />
+          <ContactForm
+            heading={data.formHeading}
+            buttonText={data.formButtonText}
+            successMessage={data.formSuccessMessage}
+          />
+        </div>
       </div>
     </div>
   );

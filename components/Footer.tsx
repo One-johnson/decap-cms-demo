@@ -3,6 +3,7 @@ import CtaLink from "@/components/CtaLink";
 
 interface FooterProps {
   brandName: string;
+  logo?: string;
   blurb: string;
   ctaText: string;
   ctaLink: string;
@@ -15,40 +16,50 @@ export default function Footer({
   ctaLink,
 }: FooterProps) {
   return (
-    <footer className="border-t border-slate-200/80 bg-slate-50">
-      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-12 lg:flex-row lg:items-start lg:justify-between lg:px-8">
-        <div className="max-w-sm">
-          <p className="text-base font-semibold text-[#0f2744]">{brandName}</p>
-          <p className="mt-2 text-sm leading-relaxed text-slate-600">{blurb}</p>
+    <footer className="border-t border-gold/15 bg-charcoal text-white">
+      <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-14 lg:flex-row lg:items-start lg:justify-between lg:px-8">
+        <div className="max-w-md">
+          <p className="font-display text-3xl font-semibold tracking-tight text-gold-light">
+            {brandName}
+          </p>
+          <p className="mt-4 text-base leading-relaxed text-stone-light sm:text-lg">
+            {blurb}
+          </p>
           <CtaLink
             href={ctaLink}
-            className="mt-5 inline-flex rounded-md bg-[#0f2744] px-4 py-2 text-sm font-semibold text-white transition hover:bg-[#163a5f]"
+            className="mt-6 inline-flex rounded-sm bg-gold px-5 py-2.5 text-base font-semibold text-charcoal transition hover:bg-gold-light"
           >
             {ctaText}
           </CtaLink>
         </div>
 
-        <div className="flex gap-10 text-sm">
+        <div className="flex gap-10 text-base">
           <div>
-            <p className="font-medium text-[#0f2744]">Pages</p>
-            <ul className="mt-3 space-y-2 text-slate-600">
+            <p className="font-medium text-gold-light">Pages</p>
+            <ul className="mt-4 space-y-2.5 text-stone-light">
               <li>
-                <Link href="/" className="hover:text-teal-700">
+                <Link href="/" className="transition hover:text-gold-light">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="hover:text-teal-700">
+                <Link href="/about" className="transition hover:text-gold-light">
                   About
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-teal-700">
+                <Link
+                  href="/services"
+                  className="transition hover:text-gold-light"
+                >
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-teal-700">
+                <Link
+                  href="/contact"
+                  className="transition hover:text-gold-light"
+                >
                   Contact
                 </Link>
               </li>
@@ -57,8 +68,8 @@ export default function Footer({
         </div>
       </div>
 
-      <div className="border-t border-slate-200/80">
-        <p className="mx-auto max-w-6xl px-6 py-4 text-xs text-slate-500 lg:px-8">
+      <div className="border-t border-gold/10">
+        <p className="mx-auto max-w-6xl px-6 py-5 text-sm text-stone-light/70 lg:px-8">
           © {new Date().getFullYear()} {brandName}. Content managed with Decap
           CMS.
         </p>

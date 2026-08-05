@@ -12,6 +12,16 @@ export interface ServiceItem {
   ctaLink?: string;
 }
 
+export interface TitleDescriptionItem {
+  title: string;
+  description: string;
+}
+
+export interface ComplianceItem {
+  label: string;
+  detail: string;
+}
+
 export interface CtaBandFields {
   ctaBandHeading?: string;
   ctaBandDescription?: string;
@@ -21,6 +31,8 @@ export interface CtaBandFields {
 
 export interface SiteSettings {
   brandName: string;
+  logo?: string;
+  favicon?: string;
   footerBlurb: string;
   navCtaText: string;
   navCtaLink: string;
@@ -37,6 +49,10 @@ export interface HomeFrontmatter extends CtaBandFields {
   secondaryCtaText?: string;
   secondaryCtaLink?: string;
   heroImage?: string;
+  processHeading?: string;
+  processSteps?: TitleDescriptionItem[];
+  whyChooseUsHeading?: string;
+  whyChooseUs?: TitleDescriptionItem[];
 }
 
 export interface AboutFrontmatter extends CtaBandFields {
@@ -44,7 +60,9 @@ export interface AboutFrontmatter extends CtaBandFields {
   companyDescription: string;
   mission: string;
   vision: string;
-  values: string;
+  values?: TitleDescriptionItem[];
+  complianceHeading?: string;
+  complianceItems?: ComplianceItem[];
   ctaText?: string;
   ctaLink?: string;
 }
@@ -65,6 +83,9 @@ export interface ContactFrontmatter {
   whatsappButtonText?: string;
   bookingCtaText?: string;
   bookingCtaLink?: string;
+  formHeading?: string;
+  formButtonText?: string;
+  formSuccessMessage?: string;
 }
 
 export type PageSlug = "home" | "about" | "services" | "contact";

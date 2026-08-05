@@ -89,6 +89,7 @@ Copy `.env.example` and set values in Vercel (Project → Settings → Environme
 | `GITHUB_CLIENT_ID` | Yes | OAuth App client ID |
 | `GITHUB_CLIENT_SECRET` | Yes | OAuth App client secret |
 | `OAUTH_REDIRECT_URL` | No | Defaults to `https://<host>/api/callback` |
+| `WEB3FORMS_ACCESS_KEY` | No | Sends contact form emails via [Web3Forms](https://web3forms.com) (free). Without it, submissions still succeed in demo mode. |
 
 ### Step C — Update Decap config
 
@@ -145,4 +146,7 @@ public/uploads/       CMS media uploads
 
 - Keep `local_backend: true` for local demos; production still uses the GitHub backend when not on localhost.
 - After changing Markdown locally outside the CMS, refresh the browser to see updates.
+- **Site Settings** in Decap controls brand name, logo, favicon, and nav/footer CTAs.
+- **Font sizes, spacing, and layout** stay in code (design system). Content and brand assets are CMS-editable.
+- Upload a square PNG for the favicon under Site Settings → Favicon.
 - This demo intentionally stays simple: four pages, file-based content, no database.

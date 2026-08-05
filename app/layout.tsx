@@ -1,21 +1,41 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Cormorant_Garamond, Source_Sans_3 } from "next/font/google";
+import { getSettings } from "@/lib/content";
 import "./globals.css";
 
-const plusJakarta = Plus_Jakarta_Sans({
-  variable: "--font-plus-jakarta",
+const cormorant = Cormorant_Garamond({
+  variable: "--font-cormorant",
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
+
+const sourceSans = Source_Sans_3({
+  variable: "--font-source-sans",
   subsets: ["latin"],
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: {
-    default: "Apex Consulting",
-    template: "%s | Apex Consulting",
-  },
-  description:
-    "Strategy and operations consulting demo site powered by Decap CMS.",
-};
+export function generateMetadata(): Metadata {
+  const settings = getSettings();
+
+  return {
+    title: {
+      default: settings.brandName,
+      template: `%s | ${settings.brandName}`,
+    },
+    description:
+      settings.footerBlurb ||
+      "Gold aggregation, buying, and trading across West Africa.",
+    icons: settings.favicon
+      ? {
+          icon: settings.favicon,
+          shortcut: settings.favicon,
+          apple: settings.favicon,
+        }
+      : undefined,
+  };
+}
 
 export default function RootLayout({
   children,
@@ -23,8 +43,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${plusJakarta.variable} h-full antialiased`}>
-      <body className="min-h-full font-sans text-slate-800">{children}</body>
+    <html
+      lang="en"
+      className={`${cormorant.variable} ${sourceSans.variable} h-full antialiased`}
+    >
+      <body className="min-h-full font-sans text-foreground">{children}</body>
     </html>
   );
 }
