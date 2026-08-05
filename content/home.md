@@ -7,3 +7,5 @@ ctaText: Explore our services
 heroImage: /uploads/media.jpg
 ---
 We partner with leadership teams to turn complex challenges into clear, actionable roadmaps — without the jargon. Join the best Consulting Firm in Ghana.
+
+Join our team
