@@ -1,16 +1,17 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f4ef;
-  --foreground: #1a1714;
-  --charcoal: #0c0b09;
-  --charcoal-elevated: #16130f;
-  --gold: #c9a227;
-  --gold-light: #e0c35a;
-  --gold-muted: #a88620;
-  --stone: #5c564c;
-  --stone-light: #8a8378;
-  --surface: #faf8f4;
+  /* Logo-derived palette — primary brand #604830 */
+  --background: #f8f6f3;
+  --foreground: #2f2419;
+  --charcoal: #2f2419;
+  --charcoal-elevated: #3d3024;
+  --gold: #604830;
+  --gold-light: #c4a882;
+  --gold-muted: #7a6248;
+  --stone: #6b5a4a;
+  --stone-light: #a89580;
+  --surface: #ffffff;
 }
 
 @theme inline {
@@ -92,15 +93,15 @@ body {
   background:
     radial-gradient(
       ellipse at 8% 0%,
-      rgba(201, 162, 39, 0.1),
+      rgba(96, 72, 48, 0.08),
       transparent 42%
     ),
     radial-gradient(
       ellipse at 92% 18%,
-      rgba(22, 19, 15, 0.04),
+      rgba(47, 36, 25, 0.04),
       transparent 38%
     ),
-    linear-gradient(180deg, #ebe6dc 0%, #f7f4ef 38%, #f7f4ef 100%);
+    linear-gradient(180deg, #efeae4 0%, #f8f6f3 38%, #f8f6f3 100%);
 }
 
 .section-label {

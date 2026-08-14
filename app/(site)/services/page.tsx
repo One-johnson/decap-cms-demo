@@ -11,8 +11,14 @@ import {
 export function generateMetadata(): Metadata {
   const { data } = getPageContent<ServicesFrontmatter>("services");
   return {
-    title: data.title,
+    title: "Gold Sourcing, Aggregation & Trading Services",
     description: data.description,
+    alternates: { canonical: "/services" },
+    openGraph: {
+      title: "Gold Sourcing, Aggregation & Trading Services",
+      description: data.description,
+      url: "/services",
+    },
   };
 }
 
@@ -22,7 +28,7 @@ export default function ServicesPage() {
 
   return (
     <div className="page-shell">
-      <div className="bg-charcoal pb-16 pt-28 lg:pt-32">
+      <div className="bg-charcoal pb-16 pt-32 lg:pt-36">
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <p className="font-display text-3xl font-semibold tracking-tight text-gold-light sm:text-4xl">
             {settings.brandName}

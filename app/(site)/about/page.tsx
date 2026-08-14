@@ -11,15 +11,21 @@ import {
 export function generateMetadata(): Metadata {
   const { data } = getPageContent<AboutFrontmatter>("about");
   return {
-    title: data.title,
+    title: "About GOLDENMARK GHANA LTD.",
     description: data.companyDescription,
+    alternates: { canonical: "/about" },
+    openGraph: {
+      title: "About GOLDENMARK GHANA LTD.",
+      description: data.companyDescription,
+      url: "/about",
+    },
   };
 }
 
 const highlights = [
-  { value: "2014", label: "Established in Accra" },
-  { value: "12+", label: "Years of experience" },
-  { value: "WA", label: "West African reach" },
+  { value: "2025", label: "Established in Ghana" },
+  { value: "GoldBod", label: "Licensed Self-Financing Aggregator" },
+  { value: "Accra", label: "Greater Accra operations" },
 ];
 
 export default function AboutPage() {
@@ -28,10 +34,10 @@ export default function AboutPage() {
 
   return (
     <div className="page-shell">
-      <div className="relative overflow-hidden bg-charcoal pb-20 pt-28 lg:pb-24 lg:pt-36">
+      <div className="relative overflow-hidden bg-charcoal pb-20 pt-32 lg:pb-24 lg:pt-40">
         <div
           aria-hidden
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_15%_20%,rgba(201,162,39,0.18),transparent_45%),radial-gradient(ellipse_at_90%_80%,rgba(224,195,90,0.08),transparent_40%)]"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_15%_20%,rgba(96,72,48,0.35),transparent_45%),radial-gradient(ellipse_at_90%_80%,rgba(196,168,130,0.1),transparent_40%)]"
         />
         <div className="relative mx-auto max-w-6xl px-6 lg:px-8">
           <p className="font-display text-3xl font-semibold tracking-tight text-gold-light sm:text-4xl">
@@ -84,9 +90,9 @@ export default function AboutPage() {
       {data.values && data.values.length > 0 ? (
         <section className="py-20 lg:py-24">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
-            <p className="section-label">What guides us</p>
+            <p className="section-label">Mission, vision & values</p>
             <h2 className="mt-4 font-display text-4xl font-semibold tracking-tight text-charcoal sm:text-5xl">
-              Core values
+              Our core values
             </h2>
             <span aria-hidden className="gold-rule mt-6" />
 
@@ -117,9 +123,9 @@ export default function AboutPage() {
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
             <div>
-              <p className="section-label">Our story</p>
+              <p className="section-label">About Goldenmark</p>
               <h2 className="mt-4 font-display text-4xl font-semibold tracking-tight text-charcoal sm:text-5xl">
-                Background & milestones
+                Our story & progress
               </h2>
               <span aria-hidden className="gold-rule mt-6" />
             </div>
@@ -131,7 +137,7 @@ export default function AboutPage() {
       {data.complianceItems && data.complianceItems.length > 0 ? (
         <section className="bg-charcoal py-20 text-white lg:py-24">
           <div className="mx-auto max-w-6xl px-6 lg:px-8">
-            <p className="section-label text-gold">Standards</p>
+            <p className="section-label text-gold">Compliance framework</p>
             <h2 className="mt-4 font-display text-4xl font-semibold tracking-tight text-gold-light sm:text-5xl">
               {data.complianceHeading || "Compliance & Certifications"}
             </h2>
@@ -158,7 +164,7 @@ export default function AboutPage() {
               <div className="mt-14">
                 <CtaLink
                   href={data.ctaLink}
-                  className="inline-flex rounded-sm bg-gold px-6 py-3.5 text-base font-semibold text-charcoal transition hover:bg-gold-light"
+                  className="inline-flex rounded-sm bg-gold-light px-6 py-3.5 text-base font-semibold text-charcoal transition hover:bg-white"
                 >
                   {data.ctaText}
                 </CtaLink>

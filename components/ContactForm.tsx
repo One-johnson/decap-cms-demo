@@ -141,7 +141,7 @@ export default function ContactForm({
           <button
             type="submit"
             disabled={status === "loading"}
-            className="inline-flex rounded-sm bg-gold px-6 py-3.5 text-base font-semibold text-charcoal transition hover:bg-gold-light disabled:cursor-not-allowed disabled:opacity-60"
+            className="inline-flex rounded-sm bg-gold px-6 py-3.5 text-base font-semibold text-white transition hover:bg-gold-muted disabled:cursor-not-allowed disabled:opacity-60"
           >
             {status === "loading" ? "Sending…" : buttonText}
           </button>

@@ -43,20 +43,20 @@ export default function Hero({
         <>
           <div
             aria-hidden
-            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_18%_25%,rgba(201,162,39,0.22),transparent_48%),radial-gradient(ellipse_at_85%_70%,rgba(224,195,90,0.08),transparent_42%),linear-gradient(155deg,#0c0b09_0%,#16130f_50%,#0c0b09_100%)]"
+            className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_18%_25%,rgba(96,72,48,0.35),transparent_48%),radial-gradient(ellipse_at_85%_70%,rgba(196,168,130,0.1),transparent_42%),linear-gradient(155deg,#2f2419_0%,#3d3024_50%,#2f2419_100%)]"
           />
           <div
             aria-hidden
             className="pointer-events-none absolute inset-0 opacity-[0.06]"
             style={{
               backgroundImage:
-                "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c9a227' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
+                "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23c4a882' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
             }}
           />
         </>
       )}
 
-      <div className="relative mx-auto w-full max-w-6xl px-6 pb-20 pt-28 lg:px-8 lg:pt-32">
+      <div className="relative mx-auto w-full max-w-6xl px-6 pb-20 pt-32 lg:px-8 lg:pt-36">
         <p className="animate-fade-up font-display text-6xl font-semibold tracking-tight text-gold-light sm:text-7xl lg:text-8xl">
           {brandName}
         </p>
@@ -73,14 +73,14 @@ export default function Hero({
         <div className="animate-fade-up animation-delay-300 mt-10 flex flex-wrap items-center gap-4">
           <CtaLink
             href={ctaHref}
-            className="inline-flex items-center rounded-sm bg-gold px-7 py-3.5 text-base font-semibold text-charcoal transition hover:bg-gold-light focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-light"
+            className="inline-flex items-center rounded-sm bg-gold-light px-7 py-3.5 text-base font-semibold text-charcoal transition hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold-light"
           >
             {ctaText}
           </CtaLink>
           {secondaryCtaText && secondaryCtaHref ? (
             <CtaLink
               href={secondaryCtaHref}
-              className="inline-flex items-center rounded-sm border border-gold/40 px-7 py-3.5 text-base font-semibold text-gold-light transition hover:border-gold-light hover:bg-gold/10"
+              className="inline-flex items-center rounded-sm border border-gold-light/50 px-7 py-3.5 text-base font-semibold text-gold-light transition hover:border-gold-light hover:bg-gold-light/10"
             >
               {secondaryCtaText}
             </CtaLink>
