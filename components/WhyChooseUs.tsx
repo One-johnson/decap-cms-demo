@@ -14,7 +14,7 @@ export default function WhyChooseUs({
   return (
     <section className="border-t border-gold/15 bg-charcoal py-20 text-white lg:py-24">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
-        <p className="section-label text-gold">Our difference</p>
+        <p className="section-label text-gold">Why partner with us</p>
         <h2 className="mt-4 font-display text-4xl font-semibold tracking-tight text-gold-light sm:text-5xl">
           {heading}
         </h2>

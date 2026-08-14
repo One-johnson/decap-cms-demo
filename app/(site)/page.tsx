@@ -13,8 +13,17 @@ import {
 export function generateMetadata(): Metadata {
   const { data } = getPageContent<HomeFrontmatter>("home");
   return {
-    title: data.title,
+    title: {
+      absolute:
+        "Goldenmark Ghana | GoldBod-Licensed Self-Financing Aggregator",
+    },
     description: data.heroDescription,
+    alternates: { canonical: "/" },
+    openGraph: {
+      title: "Goldenmark Ghana | GoldBod-Licensed Self-Financing Aggregator",
+      description: data.heroDescription,
+      url: "/",
+    },
   };
 }
 

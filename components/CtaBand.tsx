@@ -30,7 +30,7 @@ export default function CtaBand({
         </div>
         <CtaLink
           href={buttonLink}
-          className="inline-flex shrink-0 items-center rounded-sm bg-gold px-7 py-3.5 text-base font-semibold text-charcoal transition hover:bg-gold-light"
+          className="inline-flex shrink-0 items-center rounded-sm bg-gold-light px-7 py-3.5 text-base font-semibold text-charcoal transition hover:bg-white"
         >
           {buttonText}
         </CtaLink>

@@ -14,13 +14,13 @@ export default function ProcessSteps({
   return (
     <section className="border-t border-gold/15 py-20 lg:py-24">
       <div className="mx-auto max-w-6xl px-6 lg:px-8">
-        <p className="section-label">How we work</p>
+        <p className="section-label">The Goldenmark process</p>
         <h2 className="mt-4 font-display text-4xl font-semibold tracking-tight text-charcoal sm:text-5xl">
           {heading}
         </h2>
         <span aria-hidden className="gold-rule animate-draw-line mt-6" />
 
-        <ol className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-8">
+        <ol className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-14">
           {steps.map((step, index) => (
             <li
               key={step.title}

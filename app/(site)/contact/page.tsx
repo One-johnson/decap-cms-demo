@@ -10,10 +10,17 @@ import {
 
 export function generateMetadata(): Metadata {
   const { data } = getPageContent<ContactFrontmatter>("contact");
-  const settings = getSettings();
   return {
-    title: data.title,
-    description: `Contact ${settings.brandName} at ${data.email}`,
+    title: "Contact Us",
+    description:
+      "Contact GOLDENMARK GHANA LTD. in Greater Accra for gold sourcing, aggregation, trading and partnership inquiries.",
+    alternates: { canonical: "/contact" },
+    openGraph: {
+      title: "Contact GOLDENMARK GHANA LTD.",
+      description:
+        "Reach our Greater Accra team for licensed gold aggregation and commercial partnership inquiries.",
+      url: "/contact",
+    },
   };
 }
 
@@ -23,7 +30,7 @@ export default function ContactPage() {
 
   return (
     <div className="page-shell">
-      <div className="bg-charcoal pb-16 pt-28 lg:pt-32">
+      <div className="bg-charcoal pb-16 pt-32 lg:pt-36">
         <div className="mx-auto max-w-6xl px-6 lg:px-8">
           <p className="font-display text-3xl font-semibold tracking-tight text-gold-light sm:text-4xl">
             {settings.brandName}

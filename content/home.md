@@ -1,40 +1,48 @@
 ---
 title: Home
-heroHeading: Gold sourced with care. Delivered with certainty.
-heroDescription: Goldenmark aggregates, verifies, and trades responsibly sourced gold — connecting West African producers with trusted buyers across regional and international markets.
+heroHeading: Responsible gold. Licensed aggregation. International standards.
+heroDescription: GOLDENMARK GHANA LTD. (GMG) is a GoldBod-licensed Self-Financing Aggregator — sourcing, aggregating and trading gold with integrity, compliance and lasting commercial partnerships.
 ctaText: Explore our services
 ctaLink: /services
 secondaryCtaText: Contact us
 secondaryCtaLink: /contact
 heroImage: /uploads/media.jpg
-processHeading: Our Process
+processHeading: Our Gold Buying Process
 processSteps:
-  - title: Sourcing
-    description: We build long-term relationships with licensed miners, artisanal cooperatives, and established suppliers across Ghana and the wider West African corridor — securing steady volumes under clear commercial terms.
-  - title: Verification & Testing
-    description: Every lot undergoes documented assay and purity checks. We verify provenance paperwork, weigh and test consignments, and only accept material that meets our quality and authenticity standards.
-  - title: Aggregation
-    description: Verified gold is consolidated into trade-ready lots. Our aggregation model balances supplier flexibility with buyer requirements for consistent grade, volume, and documentation.
-  - title: Trading & Delivery
-    description: We match supply to buyer demand, execute transparent transactions, and coordinate secure logistics through to delivery — with clear settlement terms at every stage.
-whyChooseUsHeading: Why Choose Us
+  - title: Supplier Verification
+    description: We verify the supplier’s identity and licensing or authorisation status and undertake the required KYC and due diligence procedures.
+  - title: Gold Presentation & Documentation
+    description: The supplier presents the gold together with the relevant transaction and ownership documentation for verification.
+  - title: Weighing & Assaying
+    description: The gold is accurately weighed and assayed to establish its weight, purity and quality.
+  - title: Pricing
+    description: The transaction price is determined in accordance with applicable GoldBod pricing requirements and Goldenmark’s licence conditions.
+  - title: Purchase & Payment
+    description: Following satisfactory verification of the supplier, gold and transaction, Goldenmark completes the purchase using its own financing resources.
+  - title: Transaction Documentation
+    description: The required transaction documentation and records are prepared and maintained in accordance with applicable requirements.
+  - title: Secure Handling & Transportation
+    description: Purchased gold is securely handled, stored and transported using authorised arrangements.
+  - title: Aggregation & Supply
+    description: The purchased gold is aggregated for onward supply in accordance with Goldenmark’s licence and applicable regulatory requirements.
+whyChooseUsHeading: Why Goldenmark
 whyChooseUs:
-  - title: Trusted sourcing network
-    description: A proven web of licensed suppliers and cooperatives built over more than a decade of regional operations.
-  - title: Transparent transactions
-    description: Clear pricing, documented assays, and open communication from first inquiry through final settlement.
-  - title: Reliable supply chain
-    description: Consistent volumes and delivery discipline so partners can plan with confidence.
-  - title: Quality assurance
-    description: Rigorous testing and verification on every lot before aggregation or sale.
-  - title: Professional service
-    description: Dedicated trade support for miners, aggregators, and institutional buyers alike.
-  - title: Industry experience
-    description: Twelve years focused exclusively on gold aggregation, buying, and trading in West Africa.
-ctaBandHeading: Ready to trade with confidence?
-ctaBandDescription: Tell us about your sourcing or buying needs. Our team responds promptly with clear next steps.
+  - title: International Experience, Local Presence
+    description: Goldenmark Ghana combines a dedicated Ghanaian operation with the experience, expertise and international outlook of the wider Goldenmark group.
+  - title: Licensed & Professional
+    description: Our GoldBod licence and structured operating processes provide a strong foundation for professional participation in Ghana’s regulated gold sector.
+  - title: Responsible Business
+    description: Responsible sourcing, transparency and regulatory compliance are embedded in how we conduct our operations.
+  - title: Strong Commercial Relationships
+    description: We focus on building long-term relationships with suppliers, commercial partners and stakeholders based on trust, reliability and mutual value.
+  - title: International Outlook
+    description: Our international commercial relationships and wider group experience support Goldenmark Ghana’s ambition to participate meaningfully in Ghana’s position within the global precious metals industry.
+ctaBandHeading: Ready to work with a licensed partner?
+ctaBandDescription: Whether you supply gold or seek a professional aggregation and trading partner, our team is ready to discuss a structured, compliant engagement.
 ctaBandButtonText: Get in touch
 ctaBandButtonLink: /contact
 ---
 
-Goldenmark operates at the intersection of local production and global demand. From Accra, we source and aggregate gold across key West African mining regions, then trade verified supply to refiners, exporters, and institutional buyers who need reliability without compromise.
+GOLDENMARK GHANA LTD. (GMG) is a Ghanaian gold and precious minerals company operating as a GoldBod-licensed Self-Financing Aggregator. Established in 2025, Goldenmark Ghana combines a dedicated local presence with the experience and international outlook of the wider Goldenmark group, which has an established history in precious metals and international trade.
+
+Our business focuses on the responsible sourcing, purchasing, aggregation, trading and supply of gold — supported by strong commercial standards and a commitment to integrity, regulatory compliance and long-term partnerships.

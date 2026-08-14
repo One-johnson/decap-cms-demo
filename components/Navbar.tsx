@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
@@ -21,6 +22,7 @@ interface NavbarProps {
 
 export default function Navbar({
   brandName,
+  logo,
   ctaText,
   ctaLink,
 }: NavbarProps) {
@@ -41,23 +43,37 @@ export default function Navbar({
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+      className={`fixed inset-x-0 top-0 z-50 border-b transition-all duration-300 ${
         scrolled || open
-          ? "bg-charcoal/95 shadow-lg shadow-black/20 backdrop-blur-md"
-          : "bg-charcoal/80 backdrop-blur-sm"
+          ? "border-gold/15 bg-surface/95 shadow-sm shadow-charcoal/10 backdrop-blur-md"
+          : "border-transparent bg-surface/90 backdrop-blur-sm"
       }`}
     >
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3 lg:px-8">
         <Link
           href="/"
-          className="font-display text-3xl font-semibold tracking-tight text-gold-light transition-opacity hover:opacity-90"
+          className="flex items-center transition-opacity hover:opacity-90"
+          aria-label={`${brandName} home`}
         >
-          {brandName}
+          {logo ? (
+            <Image
+              src={logo}
+              alt={brandName}
+              width={200}
+              height={93}
+              priority
+              className="h-11 w-auto object-contain sm:h-12"
+            />
+          ) : (
+            <span className="font-display text-3xl font-semibold tracking-tight text-gold">
+              {brandName}
+            </span>
+          )}
         </Link>
 
         <button
           type="button"
-          className="inline-flex items-center justify-center rounded-sm p-2 text-gold-light/90 md:hidden"
+          className="inline-flex items-center justify-center rounded-sm p-2 text-gold md:hidden"
           aria-expanded={open}
           aria-label="Toggle navigation"
           onClick={() => setOpen((value) => !value)}
@@ -96,8 +112,8 @@ export default function Navbar({
                     href={link.href}
                     className={`text-base font-medium transition-colors ${
                       active
-                        ? "text-gold-light"
-                        : "text-white/80 hover:text-gold-light"
+                        ? "text-gold"
+                        : "text-stone hover:text-gold"
                     }`}
                   >
                     {link.label}
@@ -108,7 +124,7 @@ export default function Navbar({
           </ul>
           <CtaLink
             href={ctaLink}
-            className="rounded-sm bg-gold px-5 py-2.5 text-base font-semibold text-charcoal transition hover:bg-gold-light"
+            className="rounded-sm bg-gold px-5 py-2.5 text-base font-semibold text-white transition hover:bg-gold-muted"
           >
             {ctaText}
           </CtaLink>
@@ -116,7 +132,7 @@ export default function Navbar({
       </nav>
 
       {open && (
-        <div className="border-t border-gold/15 px-6 py-4 md:hidden">
+        <div className="border-t border-gold/15 bg-surface px-6 py-4 md:hidden">
           <ul className="flex flex-col gap-3">
             {links.map((link) => {
               const active = pathname === link.href;
@@ -126,7 +142,7 @@ export default function Navbar({
                     href={link.href}
                     onClick={() => setOpen(false)}
                     className={`block text-base font-medium ${
-                      active ? "text-gold-light" : "text-white/90"
+                      active ? "text-gold" : "text-stone"
                     }`}
                   >
                     {link.label}
@@ -138,7 +154,7 @@ export default function Navbar({
               <CtaLink
                 href={ctaLink}
                 onClick={() => setOpen(false)}
-                className="inline-flex rounded-sm bg-gold px-5 py-2.5 text-base font-semibold text-charcoal"
+                className="inline-flex rounded-sm bg-gold px-5 py-2.5 text-base font-semibold text-white"
               >
                 {ctaText}
               </CtaLink>

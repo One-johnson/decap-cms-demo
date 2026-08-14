@@ -1,51 +1,60 @@
 ---
 title: About Us
-companyDescription: Goldenmark is a West African gold aggregation and trading company founded in Accra in 2014. We started by building trust with small and mid-scale producers who needed a fair, professional buyer — and grew into a regional partner for verified gold supply.
-mission: To connect responsible gold producers with trustworthy markets through transparent aggregation, rigorous verification, and reliable trade execution.
-vision: To be West Africa’s most trusted mark for responsibly aggregated gold — where quality, integrity, and lasting partnerships define every transaction.
+companyDescription: GOLDENMARK GHANA LTD. (GMG) is a Ghanaian gold and precious minerals company operating as a GoldBod-licensed Self-Financing Aggregator. Established on 12 June 2025, we combine a dedicated local presence in Greater Accra with the experience and international outlook of the wider Goldenmark group.
+mission: To responsibly source, aggregate and trade gold and precious minerals while delivering integrity, quality, transparency and value to our partners.
+vision: To build a leading and trusted gold and precious minerals business, recognised for responsible sourcing, professional excellence and sustainable growth in Ghana and international markets.
 values:
   - title: Integrity
-    description: We conduct business honestly and honor every commitment we make to suppliers and buyers.
-  - title: Transparency
-    description: Pricing, assays, and documentation are clear and available at each stage of the trade.
-  - title: Reliability
-    description: Partners depend on us for consistent volumes, timelines, and professional follow-through.
-  - title: Responsible sourcing
-    description: We prioritize licensed channels, documented provenance, and ethical commercial practice.
+    description: We conduct our business with honesty, transparency and strong ethical standards.
   - title: Excellence
-    description: Quality standards and service discipline are non-negotiable in everything we deliver.
-complianceHeading: Compliance & Responsible Practice
+    description: We maintain high standards across our operations and commercial relationships.
+  - title: Trust
+    description: We build lasting partnerships through reliability, accountability and professionalism.
+  - title: Responsible Sourcing
+    description: We promote responsible and transparent practices throughout our supply chain.
+  - title: Compliance
+    description: We conduct our operations in accordance with applicable laws, regulations and licence requirements.
+  - title: Innovation
+    description: We embrace modern solutions and international best practices to continuously improve our operations.
+  - title: Sustainable Growth
+    description: We pursue long-term growth that creates value for our partners and stakeholders.
+complianceHeading: Responsible Sourcing & Compliance
 complianceItems:
-  - label: Company registration
-    detail: Goldenmark is a registered company operating under Ghanaian corporate law, with Accra as our principal place of business.
-  - label: Trade licensing
-    detail: We conduct gold buying and aggregation activities in line with applicable local licensing and regulatory requirements for the precious minerals trade.
-  - label: Responsible sourcing policy
-    detail: We source through licensed miners, cooperatives, and established suppliers; reject undocumented material; and maintain chain-of-custody records for aggregated lots.
-  - label: Quality & assay standards
-    detail: All consignments are weighed, tested, and verified before aggregation or sale. We work with recognized assay practices to confirm purity and authenticity.
-  - label: Industry engagement
-    detail: We maintain active relationships with trade partners, logistics providers, and industry associations that support transparent precious-minerals commerce in the region.
+  - label: Know Your Customer (KYC) & Due Diligence
+    detail: We undertake KYC and customer due diligence, including supplier and counterparty verification and beneficial ownership checks where applicable.
+  - label: Transaction Due Diligence
+    detail: Every transaction is subject to appropriate due diligence, including gold origin and documentation verification before purchase is completed.
+  - label: Supply-Chain Traceability
+    detail: Our compliance framework is designed to support transparency, traceability and integrity throughout our sourcing and purchasing activities.
+  - label: AML & CTF Controls
+    detail: We apply anti-money laundering and counter-terrorist financing controls, with appropriate transaction monitoring and record-keeping.
+  - label: Anti-Bribery & Anti-Corruption
+    detail: We uphold anti-bribery and anti-corruption principles across our commercial relationships and operations.
+  - label: Commitment to Lawful Trade
+    detail: We are committed to ensuring that our activities do not support illegal mining, corruption, exploitation, money laundering or other unlawful activities within the gold supply chain.
 ctaText: See our services
 ctaLink: /services
-ctaBandHeading: Partner with a team that stands behind every lot
-ctaBandDescription: Whether you supply gold or need a dependable buying partner, we are ready to discuss terms that work.
+ctaBandHeading: Partner with a licensed, professional aggregator
+ctaBandDescription: Responsible sourcing is fundamental to how Goldenmark conducts its business — and to the trusted relationships we build with suppliers, partners and stakeholders.
 ctaBandButtonText: Contact Goldenmark
 ctaBandButtonLink: /contact
 ---
 
-## How we started
+## Who we are
 
-Goldenmark began with a simple observation: producers and buyers both needed a mid-market partner who could aggregate thoughtfully, verify rigorously, and trade transparently. From a lean Accra base, we invested in supplier relationships across Ghana’s mining belts and expanded into neighbouring West African corridors where licensed supply could be secured and documented.
+GOLDENMARK GHANA LTD. was established in 2025 as part of the wider Goldenmark group’s international vision for the precious metals sector.
 
-## Years of experience
+Led by Dominik Kleemann, JD, MBA, Chief Executive Officer, the company was established to bring the Goldenmark group’s experience, commercial expertise and international perspective to Ghana’s gold industry through a dedicated local operation.
 
-With more than twelve years in gold aggregation and trading, our team understands the realities of field sourcing, assay discipline, logistics risk, and institutional buyer expectations. That experience shows up in how we structure deals — clear terms, verified material, and delivery you can plan around.
+Goldenmark Ghana has since obtained its licence to operate as a Self-Financing Aggregator under the GoldBod framework, establishing the company within Ghana’s regulated gold aggregation sector.
 
-## Major milestones
+The company draws on the wider Goldenmark group’s experience in precious metals, international trade, cross-border business development and commercial partnerships while developing its own operational presence and relationships in Ghana.
 
-- **2014** — Company founded in Accra with a focus on fair, professional gold buying.
-- **2017** — Expanded aggregation network across multiple Ghanaian mining regions.
-- **2020** — Formalized verification and documentation protocols for every traded lot.
-- **2023** — Strengthened cross-border West African sourcing partnerships.
-- **Today** — Serving producers, cooperatives, refiners, and institutional buyers with reliable verified supply.
+Our ambition is to build a trusted and enduring gold business that combines strong local operations with international commercial expertise.
+
+## Our progress
+
+- **2025 — Established in Ghana** — GOLDENMARK GHANA LTD. was established with a strategic focus on Ghana’s gold and precious minerals sector.
+- **GoldBod Licensing** — The company obtained its licence to operate as a Self-Financing Aggregator within Ghana’s regulated gold framework.
+- **Operational Development** — Goldenmark established its local operations and continues to develop relationships across Ghana’s regulated gold supply chain.
+- **International Commercial Development** — The company continues to develop relationships with reputable commercial partners and approved international off-takers, supported by the wider Goldenmark group’s international experience and network.

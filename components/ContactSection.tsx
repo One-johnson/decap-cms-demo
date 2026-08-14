@@ -70,7 +70,7 @@ export default function ContactSection({
           href={whatsappHref}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex rounded-sm bg-gold px-6 py-3.5 text-base font-semibold text-charcoal transition hover:bg-gold-light"
+          className="inline-flex rounded-sm bg-gold px-6 py-3.5 text-base font-semibold text-white transition hover:bg-gold-muted"
         >
           {whatsappButtonText}
         </a>
