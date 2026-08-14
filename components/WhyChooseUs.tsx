@@ -1,3 +1,4 @@
+import Reveal from "@/components/Reveal";
 import type { TitleDescriptionItem } from "@/lib/content";
 
 interface WhyChooseUsProps {
@@ -22,10 +23,11 @@ export default function WhyChooseUs({
 
         <ul className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((item, index) => (
-            <li
+            <Reveal
               key={item.title}
-              className="animate-fade-up border-t border-gold/20 pt-7"
-              style={{ animationDelay: `${index * 0.08}s` }}
+              as="li"
+              className="border-t border-gold/20 pt-7"
+              delay={index * 80}
             >
               <h3 className="font-display text-2xl font-semibold text-gold-light">
                 {item.title}
@@ -33,7 +35,7 @@ export default function WhyChooseUs({
               <p className="mt-3 text-base leading-relaxed text-stone-light sm:text-lg">
                 {item.description}
               </p>
-            </li>
+            </Reveal>
           ))}
         </ul>
       </div>

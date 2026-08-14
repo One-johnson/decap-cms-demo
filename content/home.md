@@ -6,8 +6,8 @@ heroDescription: GOLDENMARK GHANA LTD. (GMG) is a GoldBod-licensed
   integrity, compliance and lasting commercial partnerships.
 ctaText: Explore our services
 ctaLink: /services
-secondaryCtaText: Contact us
-secondaryCtaLink: /contact
+secondaryCtaText: About us
+secondaryCtaLink: /about
 heroImage: ""
 processHeading: Our Gold Buying Process
 processSteps:
@@ -61,8 +61,8 @@ ctaBandHeading: Ready to work with a licensed partner?
 ctaBandDescription: Whether you supply gold or seek a professional aggregation
   and trading partner, our team is ready to discuss a structured, compliant
   engagement.
-ctaBandButtonText: Get in touch
-ctaBandButtonLink: /contact
+ctaBandButtonText: Explore our services
+ctaBandButtonLink: /services
 ---
 
 GOLDENMARK GHANA LTD. (GMG) is a Ghanaian gold and precious minerals company operating as a GoldBod-licensed Self-Financing Aggregator. Established in 2025, Goldenmark Ghana combines a dedicated local presence with the experience and international outlook of the wider Goldenmark group, which has an established history in precious metals and international trade.

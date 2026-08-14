@@ -1,3 +1,4 @@
+import Reveal from "@/components/Reveal";
 import type { TitleDescriptionItem } from "@/lib/content";
 
 interface ProcessStepsProps {
@@ -22,10 +23,10 @@ export default function ProcessSteps({
 
         <ol className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-4 lg:gap-x-8 lg:gap-y-14">
           {steps.map((step, index) => (
-            <li
+            <Reveal
               key={step.title}
-              className="animate-fade-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              as="li"
+              delay={index * 100}
             >
               <p className="font-display text-5xl font-semibold text-gold/40">
                 {String(index + 1).padStart(2, "0")}
@@ -36,7 +37,7 @@ export default function ProcessSteps({
               <p className="mt-3 text-base leading-relaxed text-stone sm:text-lg">
                 {step.description}
               </p>
-            </li>
+            </Reveal>
           ))}
         </ol>
       </div>

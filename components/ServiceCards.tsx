@@ -1,5 +1,6 @@
 import Image from "next/image";
 import CtaLink from "@/components/CtaLink";
+import Reveal from "@/components/Reveal";
 import type { ServiceItem } from "@/lib/content";
 
 interface ServiceCardsProps {
@@ -10,10 +11,11 @@ export default function ServiceCards({ services }: ServiceCardsProps) {
   return (
     <ul className="mt-12 space-y-16">
       {services.map((service, index) => (
-        <li
+        <Reveal
           key={service.title}
-          className="animate-fade-up border-t border-gold/25 pt-10"
-          style={{ animationDelay: `${index * 0.08}s` }}
+          as="li"
+          className="border-t border-gold/25 pt-10"
+          delay={index * 80}
         >
           <div className="grid gap-8 lg:grid-cols-[1fr_1.4fr] lg:items-start lg:gap-16">
             <div>
@@ -52,7 +54,7 @@ export default function ServiceCards({ services }: ServiceCardsProps) {
               </p>
             </div>
           </div>
-        </li>
+        </Reveal>
       ))}
     </ul>
   );

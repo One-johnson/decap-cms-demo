@@ -1,13 +1,10 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import NotFoundContent from "@/components/NotFoundContent";
 import ScrollToTop from "@/components/ScrollToTop";
 import { getSettings } from "@/lib/content";
 
-export default function SiteLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function NotFound() {
   const settings = getSettings();
 
   return (
@@ -22,7 +19,7 @@ export default function SiteLayout({
         ctaLink={settings.navCtaLink}
       />
       <main id="main-content" className="flex-1 scroll-mt-24">
-        {children}
+        <NotFoundContent />
       </main>
       <Footer
         brandName={settings.brandName}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import CtaBand from "@/components/CtaBand";
 import CtaLink from "@/components/CtaLink";
 import MarkdownBody from "@/components/MarkdownBody";
+import Reveal from "@/components/Reveal";
 import {
   getPageContent,
   getSettings,
@@ -70,20 +71,20 @@ export default function AboutPage() {
 
       <section className="bg-charcoal py-20 lg:py-24">
         <div className="mx-auto grid max-w-6xl gap-12 px-6 lg:grid-cols-2 lg:gap-20 lg:px-8">
-          <div className="animate-fade-up">
+          <Reveal>
             <p className="section-label text-gold">Mission</p>
             <span aria-hidden className="gold-rule mt-4" />
             <p className="mt-6 font-display text-2xl font-medium leading-snug text-white sm:text-3xl">
               {data.mission}
             </p>
-          </div>
-          <div className="animate-fade-up animation-delay-100">
+          </Reveal>
+          <Reveal delay={100}>
             <p className="section-label text-gold">Vision</p>
             <span aria-hidden className="gold-rule mt-4" />
             <p className="mt-6 font-display text-2xl font-medium leading-snug text-white sm:text-3xl">
               {data.vision}
             </p>
-          </div>
+          </Reveal>
         </div>
       </section>
 
@@ -98,10 +99,11 @@ export default function AboutPage() {
 
             <ul className="mt-14 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
               {data.values.map((value, index) => (
-                <li
+                <Reveal
                   key={value.title}
-                  className="animate-fade-up border-t border-gold/30 pt-7"
-                  style={{ animationDelay: `${index * 0.07}s` }}
+                  as="li"
+                  className="border-t border-gold/30 pt-7"
+                  delay={index * 70}
                 >
                   <p className="font-display text-3xl font-semibold text-gold/35">
                     {String(index + 1).padStart(2, "0")}
@@ -112,7 +114,7 @@ export default function AboutPage() {
                   <p className="mt-3 text-lg leading-relaxed text-stone">
                     {value.description}
                   </p>
-                </li>
+                </Reveal>
               ))}
             </ul>
           </div>
@@ -145,10 +147,11 @@ export default function AboutPage() {
 
             <ul className="mt-14 grid gap-10 sm:grid-cols-2">
               {data.complianceItems.map((item, index) => (
-                <li
+                <Reveal
                   key={item.label}
-                  className="animate-fade-up border-t border-gold/20 pt-7"
-                  style={{ animationDelay: `${index * 0.06}s` }}
+                  as="li"
+                  className="border-t border-gold/20 pt-7"
+                  delay={index * 60}
                 >
                   <h3 className="font-display text-2xl font-semibold text-gold-light">
                     {item.label}
@@ -156,7 +159,7 @@ export default function AboutPage() {
                   <p className="mt-3 text-lg leading-relaxed text-stone-light">
                     {item.detail}
                   </p>
-                </li>
+                </Reveal>
               ))}
             </ul>
 

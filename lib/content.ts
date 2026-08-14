@@ -88,7 +88,7 @@ export interface ContactFrontmatter {
   formSuccessMessage?: string;
 }
 
-export type PageSlug = "home" | "about" | "services" | "contact";
+export type PageSlug = "home" | "about" | "services";
 
 export interface PageContent<T> {
   data: T;

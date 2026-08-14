@@ -27,7 +27,7 @@ collections:
           - { label: Favicon, name: favicon, widget: image, required: false, hint: "Browser tab icon (square PNG/SVG/ICO works best)" }
           - { label: Footer Blurb, name: footerBlurb, widget: text }
           - { label: Nav CTA Text, name: navCtaText, widget: string }
-          - { label: Nav CTA Link, name: navCtaLink, widget: string, hint: "e.g. /contact or https://..." }
+          - { label: Nav CTA Link, name: navCtaLink, widget: string, hint: "e.g. /services or https://..." }
           - { label: Footer CTA Text, name: footerCtaText, widget: string }
           - { label: Footer CTA Link, name: footerCtaLink, widget: string }
 
@@ -124,21 +124,3 @@ collections:
           - { label: CTA Band Description, name: ctaBandDescription, widget: text, required: false }
           - { label: CTA Band Button Text, name: ctaBandButtonText, widget: string, required: false }
           - { label: CTA Band Button Link, name: ctaBandButtonLink, widget: string, required: false }
-
-      - name: contact
-        label: Contact
-        file: content/contact.md
-        fields:
-          - { label: Title, name: title, widget: string }
-          - { label: CTA Heading, name: ctaHeading, widget: string, required: false }
-          - { label: Address, name: address, widget: string }
-          - { label: Phone, name: phone, widget: string }
-          - { label: Email, name: email, widget: string }
-          - { label: WhatsApp, name: whatsapp, widget: string }
-          - { label: WhatsApp Button Text, name: whatsappButtonText, widget: string, required: false }
-          - { label: Booking CTA Text, name: bookingCtaText, widget: string, required: false }
-          - { label: Booking CTA Link, name: bookingCtaLink, widget: string, required: false, hint: "Calendly or /contact" }
-          - { label: Form Heading, name: formHeading, widget: string, required: false }
-          - { label: Form Button Text, name: formButtonText, widget: string, required: false }
-          - { label: Form Success Message, name: formSuccessMessage, widget: text, required: false }
-          - { label: Body, name: body, widget: markdown }

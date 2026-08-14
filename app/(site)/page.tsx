@@ -43,7 +43,7 @@ export default function HomePage() {
         image={data.heroImage}
         brandName={settings.brandName}
       />
-      <section className="page-shell">
+      <section id="content-start" className="page-shell scroll-mt-24">
         <div className="mx-auto max-w-3xl px-6 py-20 lg:px-8 lg:py-24">
           <MarkdownBody content={content} />
         </div>

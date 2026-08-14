@@ -1,5 +1,6 @@
 import Image from "next/image";
 import CtaLink from "@/components/CtaLink";
+import ScrollCue from "@/components/ScrollCue";
 
 interface HeroProps {
   heading: string;
@@ -87,6 +88,7 @@ export default function Hero({
           ) : null}
         </div>
       </div>
+      <ScrollCue />
     </section>
   );
 }

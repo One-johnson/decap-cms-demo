@@ -61,8 +61,8 @@ ctaBandHeading: Partner with a licensed, professional aggregator
 ctaBandDescription: Responsible sourcing is fundamental to how Goldenmark
   conducts its business — and to the trusted relationships we build with
   suppliers, partners and stakeholders.
-ctaBandButtonText: Contact Goldenmark
-ctaBandButtonLink: /contact
+ctaBandButtonText: Explore our services
+ctaBandButtonLink: /services
 ---
 ## Who we are
 

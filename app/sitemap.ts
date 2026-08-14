@@ -4,7 +4,7 @@ const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL || "https://decap-cms-demo.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const routes = ["", "/about", "/services", "/contact"];
+  const routes = ["", "/about", "/services"];
 
   return routes.map((route) => ({
     url: `${SITE_URL}${route || "/"}`,
